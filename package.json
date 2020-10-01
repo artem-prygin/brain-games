@@ -25,6 +25,9 @@
   },
   "homepage": "https://github.com/artem-prygin/frontend-project-lvl1#readme",
   "dependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
     "promptly": "^3.0.3"
   }
 }
