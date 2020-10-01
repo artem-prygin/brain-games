@@ -1,0 +1,23 @@
+{
+  "name": "project1-artem-prygin",
+  "version": "1.0.0",
+  "description": "project for hexlet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artem-prygin/frontend-project-lvl1.git"
+  },
+  "keywords": [
+    "artem",
+    "project"
+  ],
+  "author": "Artem Prygin <aprygin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artem-prygin/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/artem-prygin/frontend-project-lvl1#readme"
+}
