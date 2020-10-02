@@ -3,4 +3,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 ![Linter for Google Actions](https://github.com/artem-prygin/frontend-project-lvl1/workflows/Linter%20Github%20Actions/badge.svg)
 
+Brain Even
 [![asciicast](https://asciinema.org/a/RQcEu9h1gjon0r9V3h4MryXTm.svg)](https://asciinema.org/a/RQcEu9h1gjon0r9V3h4MryXTm)
+
+Brain Calc
+[![asciicast](https://asciinema.org/a/UCK8DOLJyb3MnyYRhcg7dO7K7.svg)](https://asciinema.org/a/UCK8DOLJyb3MnyYRhcg7dO7K7)
