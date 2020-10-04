@@ -12,4 +12,4 @@ const brainEven = async () => {
 	} while (countRightAnswers < 3);
 };
 
-brainEven();
+brainEven().catch(() => console.log('\nGood bye!'));

@@ -4,7 +4,10 @@
 ![Linter for Google Actions](https://github.com/artem-prygin/frontend-project-lvl1/workflows/Linter%20Github%20Actions/badge.svg)
 
 Brain Even
-[![asciicast](https://asciinema.org/a/RQcEu9h1gjon0r9V3h4MryXTm.svg)](https://asciinema.org/a/RQcEu9h1gjon0r9V3h4MryXTm)
+[![asciicast](https://asciinema.org/a/wlxS3oTMtlSuVsFoMNvczFqrg.svg)](https://asciinema.org/a/wlxS3oTMtlSuVsFoMNvczFqrg)
 
 Brain Calc
 [![asciicast](https://asciinema.org/a/UCK8DOLJyb3MnyYRhcg7dO7K7.svg)](https://asciinema.org/a/UCK8DOLJyb3MnyYRhcg7dO7K7)
+
+Brain Gcd
+[![asciicast](https://asciinema.org/a/QoiHhbFDaqgWWCN5MwMWjfhaE.svg)](https://asciinema.org/a/QoiHhbFDaqgWWCN5MwMWjfhaE)

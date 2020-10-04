@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 import { greeting, checkAnswer } from '../../src/index.js';
 
-const brainEven = async () => {
+const brainCalc = async () => {
 	const name = await greeting();
 	console.log('What is the result of the expression?');
 	let countRightAnswers = 0;
 	do {
 		const operandOne = Math.floor(Math.random() * 100);
-		const operandTwo = Math.floor(Math.random() * 100);
+		const operandTwo = Math.floor(Math.random() * 10);
 		const action = Math.floor(Math.random() * 3);
 		let question = '';
 		let rightAnswer = 0;
@@ -28,4 +28,4 @@ const brainEven = async () => {
 	} while (countRightAnswers < 3);
 };
 
-brainEven();
+brainCalc().catch(() => console.log('\nGood bye!'));
