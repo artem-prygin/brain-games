@@ -7,7 +7,7 @@ Brain Even
 [![asciicast](https://asciinema.org/a/wlxS3oTMtlSuVsFoMNvczFqrg.svg)](https://asciinema.org/a/wlxS3oTMtlSuVsFoMNvczFqrg)
 
 Brain Calc
-[![asciicast](https://asciinema.org/a/UCK8DOLJyb3MnyYRhcg7dO7K7.svg)](https://asciinema.org/a/UCK8DOLJyb3MnyYRhcg7dO7K7)
+[![asciicast](https://asciinema.org/a/HSi0PdE4V7ix6QWntTNm9Cbk9.svg)](https://asciinema.org/a/HSi0PdE4V7ix6QWntTNm9Cbk9)
 
 Brain Gcd
 [![asciicast](https://asciinema.org/a/QoiHhbFDaqgWWCN5MwMWjfhaE.svg)](https://asciinema.org/a/QoiHhbFDaqgWWCN5MwMWjfhaE)

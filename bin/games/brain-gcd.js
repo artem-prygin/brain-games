@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 import { greeting, checkAnswer } from '../../src/index.js';
 
-const getMinNum = (num1, num2) => {
-	return num1 >= num2 ? num2 : num1;
-};
+const getMinNum = (num1, num2) => (num1 >= num2 ? num2 : num1);
 
 const getGcd = (num1, num2) => {
 	const minNum = getMinNum(num1, num2);
