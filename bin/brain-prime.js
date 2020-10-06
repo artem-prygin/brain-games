@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { greeting, checkAnswer } from '../../src/index.js';
+import { greeting, checkAnswer } from '../src/index.js';
 
 const isPrime = (num) => {
   for (let i = 2; i < num / 2; i += 1) {

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { greeting, checkAnswer } from '../../src/index.js';
+import { greeting, checkAnswer } from '../src/index.js';
 
 const getMinNum = (num1, num2) => (num1 >= num2 ? num2 : num1);
 
@@ -17,7 +17,7 @@ const getGcd = (num1, num2) => {
 
 const brainGcd = async () => {
   const name = await greeting();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log('Find the greatest common divisor of given numbers.');
   let countRightAnswers = 0;
   do {
     const num1 = Math.floor(Math.random() * 100);
