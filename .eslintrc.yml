@@ -12,7 +12,4 @@ parserOptions:
 rules:
   no-console: 0
   import/extensions: 0
-  indent: off
-  no-tabs: off
-  no-trailing-spaces: off
-  max-len: [2, 'code': 200]
+  no-await-in-loop: off
