@@ -1,8 +1,7 @@
 import promptly from 'promptly';
 
 export default async () => {
-  console.log('Welcome to the Brain Games!');
-  const name = await promptly.prompt('May I have your name? ');
+  const name = await promptly.prompt('Welcome to the Brain Games!\nMay I have your name? ');
   console.log(`Hello, ${name}`);
   return name;
 };

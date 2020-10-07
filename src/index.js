@@ -1,23 +1,24 @@
 import promptly from 'promptly';
+import greeting from './cli.js';
+import enums from './enums/games-enums.js';
 
-const greeting = async () => {
-  const name = await promptly.prompt('Welcome to the Brain Games!\nMay I have your name? ');
-  console.log(`Hello, ${name}`);
-  return name;
-};
-
-const checkAnswer = async (name, question, rightAnswer, countRightAnswers) => {
-  const answer = await promptly.prompt(`Question: ${question}\nYour answer? `);
-  if (answer === rightAnswer) {
-    console.log('Correct!');
-    if (countRightAnswers === 2) {
-      console.log(`Congratulations, ${name}!`);
+const playGame = async (rules, gameData) => {
+  const name = await greeting();
+  let rightAnswersCount = 0;
+  console.log(rules);
+  do {
+    const [question, rightAnswer] = gameData();
+    const userAnswer = await promptly.prompt(`Question: ${question}\nYour answer: `);
+    if (userAnswer.toString() === rightAnswer.toString()) {
+      rightAnswersCount += 1;
+      console.log('Correct!');
+    } else {
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
+      console.log(`Let's try again, ${name}!`);
+      rightAnswersCount = 0;
     }
-    return countRightAnswers + 1;
-  }
-
-  console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}.\nLet's try again, ${name}!`);
-  return 0;
+  } while (rightAnswersCount < enums.GAMES_TO_WIN);
+  console.log(`Congratulations, ${name}!`);
 };
 
-export { greeting, checkAnswer };
+export default playGame;
