@@ -9,7 +9,7 @@ const playGame = async (rules, gameData) => {
   do {
     const [question, rightAnswer] = gameData();
     const userAnswer = await promptly.prompt(`Question: ${question}\nYour answer: `);
-    if (userAnswer.toString() === rightAnswer.toString()) {
+    if (userAnswer === rightAnswer.toString()) {
       rightAnswersCount += 1;
       console.log('Correct!');
     } else {
