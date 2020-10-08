@@ -31,7 +31,7 @@ export const playGame = async (rules, gameData) => {
     } else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
       console.log(`Let's try again, ${name}!`);
-      gamesCount = -1;
+      return;
     }
   } while (gamesCount > 0 && gamesCount < gamesToWin);
   if (gamesCount === gamesToWin) {
