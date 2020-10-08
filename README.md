@@ -10,27 +10,27 @@ Check your mathematical abilities, give 3 right answers in a row and win!
 
 ## Installation
 You must have [**node.js**](https://nodejs.org/en/) installed on your machine (version 14.x is preferable). <br>
-Run ***npm install -g @hexlet/code*** to install the package on you machine.
+Run <pre><code>npm install -g @hexlet/code</code></pre> to install the package on you machine.
 
 ## Games
 #### Brain Even
-Run ***brain-even*** to start this game. You need to answer if number is even or not.
+Run <pre><code>brain-even</code></pre> to start this game. You need to answer if number is even or not.
 [![asciicast](https://asciinema.org/a/wlxS3oTMtlSuVsFoMNvczFqrg.svg)](https://asciinema.org/a/wlxS3oTMtlSuVsFoMNvczFqrg)
 
 #### Brain Calc
-Run ***brain-calc*** to start this game. You need to calculate the result of the expression.
+Run <pre><code>brain-calc</code></pre> to start this game. You need to calculate the result of the expression.
 [![asciicast](https://asciinema.org/a/HSi0PdE4V7ix6QWntTNm9Cbk9.svg)](https://asciinema.org/a/HSi0PdE4V7ix6QWntTNm9Cbk9)
 
 #### Brain Greatest Common Divisor
-Run ***brain-gcd*** to start this game. You need to find the greatest common divisor of given numbers.
+Run <pre><code>brain-gcd</code></pre> to start this game. You need to find the greatest common divisor of given numbers.
 [![asciicast](https://asciinema.org/a/Bh0sYIJd1YOIViIojin8fkvti.svg)](https://asciinema.org/a/Bh0sYIJd1YOIViIojin8fkvti)
 
 #### Brain Progression
-Run ***brain-progression*** to start this game. You need to print the missing number in progression.
+Run <pre><code>brain-progression</code></pre> to start this game. You need to print the missing number in progression.
 [![asciicast](https://asciinema.org/a/f8gQd4yi86OzPzMRiqmfvXcas.svg)](https://asciinema.org/a/f8gQd4yi86OzPzMRiqmfvXcas)
 
 #### Brain Prime
-Run ***brain-prime*** to start this game. You need to answer if number is prime or not. 
+Run <pre><code>brain-prime</code></pre> to start this game. You need to answer if number is prime or not. 
 [![asciicast](https://asciinema.org/a/WEc5nEdJsILC6pj0aP7Fheqgx.svg)](https://asciinema.org/a/WEc5nEdJsILC6pj0aP7Fheqgx)
 
 * * *

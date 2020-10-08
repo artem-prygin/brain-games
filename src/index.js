@@ -1,24 +1,40 @@
 import promptly from 'promptly';
-import greeting from './cli.js';
-import enums from './enums/games-enums.js';
+import greetAndGetName from './cli.js';
 
-const playGame = async (rules, gameData) => {
-  const name = await greeting();
-  let rightAnswersCount = 0;
+export const gamesToWin = 3;
+
+const sayGoodBye = () => console.log('\nGood bye!');
+
+export const playGame = async (rules, gameData) => {
+  let name = '';
+  try {
+    name = await greetAndGetName();
+  } catch (e) {
+    sayGoodBye();
+    return;
+  }
+  let gamesCount = 0;
   console.log(rules);
   do {
-    const [question, rightAnswer] = gameData();
-    const userAnswer = await promptly.prompt(`Question: ${question}\nYour answer: `);
+    const [question, rightAnswer] = gameData[gamesCount];
+    let userAnswer = '';
+    console.log(`Question: ${question}`);
+    try {
+      userAnswer = await promptly.prompt('Your answer: ');
+    } catch (e) {
+      sayGoodBye();
+      return;
+    }
     if (userAnswer === rightAnswer.toString()) {
-      rightAnswersCount += 1;
+      gamesCount += 1;
       console.log('Correct!');
     } else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
       console.log(`Let's try again, ${name}!`);
-      rightAnswersCount = 0;
+      gamesCount = -1;
     }
-  } while (rightAnswersCount < enums.GAMES_TO_WIN);
-  console.log(`Congratulations, ${name}!`);
+  } while (gamesCount > 0 && gamesCount < gamesToWin);
+  if (gamesCount === gamesToWin) {
+    console.log(`Congratulations, ${name}!`);
+  }
 };
-
-export default playGame;

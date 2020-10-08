@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import brainEven from '../src/games/brain-progression-logic.js';
+import brainProgression from '../src/games/brain-progression.js';
 
-brainEven().catch(() => console.log('\nGood bye'));
+brainProgression();

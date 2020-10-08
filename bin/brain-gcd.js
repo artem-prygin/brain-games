@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import brainEven from '../src/games/brain-gcd-logic.js';
+import brainGcd from '../src/games/brain-gcd.js';
 
-brainEven().catch(() => console.log('\nGood bye'));
+brainGcd();

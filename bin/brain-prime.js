@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import brainEven from '../src/games/brain-prime-logic.js';
+import brainPrime from '../src/games/brain-prime.js';
 
-brainEven().catch(() => console.log('\nGood bye'));
+brainPrime();
