@@ -33,7 +33,7 @@ export const playGame = async (rules, gameData) => {
       console.log(`Let's try again, ${name}!`);
       return;
     }
-  } while (gamesCount > 0 && gamesCount < gamesToWin);
+  } while (gamesCount < gamesToWin);
   if (gamesCount === gamesToWin) {
     console.log(`Congratulations, ${name}!`);
   }
