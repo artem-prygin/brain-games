@@ -20,8 +20,8 @@ const getGcd = (num1, num2) => {
 const getGameData = () => {
   const gameData = [];
   for (let i = 0; i < gamesToWin; i += 1) {
-    const num1 = getMathRandom(100);
-    const num2 = getMathRandom(100);
+    const num1 = getMathRandom(100, 2);
+    const num2 = getMathRandom(100, 2);
     const question = `${num1} ${num2}`;
     const rightAnswer = getGcd(num1, num2);
     gameData.push([question, rightAnswer]);
