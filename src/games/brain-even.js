@@ -1,16 +1,15 @@
-import { playGame, gamesToWin } from '../index.js';
+import { playGame } from '../index.js';
+import getGameDataForAllRounds from '../get-game-data.js';
 import getMathRandom from '../helpers/get-math-random.js';
 
 const rulesMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+const isEven = (num) => num % 2 === 0;
+
 const getGameData = () => {
-  const gameData = [];
-  for (let i = 0; i < gamesToWin; i += 1) {
-    const question = getMathRandom(100);
-    const rightAnswer = question % 2 === 0 ? 'yes' : 'no';
-    gameData.push([question, rightAnswer]);
-  }
-  return gameData;
+  const question = getMathRandom(100);
+  const rightAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, rightAnswer];
 };
 
-export default () => playGame(rulesMessage, getGameData());
+export default () => playGame(rulesMessage, getGameDataForAllRounds(getGameData));
