@@ -18,7 +18,7 @@ const createProgressionQuestion = (progression, hidden) => {
   for (let i = 0; i < progression.length; i += 1) {
     question.push(`${progression[i]}`);
   }
-  question[hidden] = '.. ';
+  question[hidden] = '..';
   return question.join(' ').trim();
 };
 
