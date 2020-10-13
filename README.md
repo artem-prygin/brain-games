@@ -10,27 +10,32 @@ Check your mathematical abilities, give 3 right answers in a row and win!
 
 ## Installation
 You must have [**node.js**](https://nodejs.org/en/) installed on your machine (version 14.x is preferable). <br>
-Run <code>npm install -g @hexlet/code</code> to install the package on you machine.
+To install the package on you machine run:
+<pre><code>npm install -g @hexlet/code</code></pre>
 
 ## Games
 #### Brain Even
-Run <code>brain-even</code> to start this game. You need to answer if number is even or not.
+You need to answer if number is even or not. To start this game run:
+<pre><code>brain-even</code></pre>
 [![asciicast](https://asciinema.org/a/wlxS3oTMtlSuVsFoMNvczFqrg.svg)](https://asciinema.org/a/wlxS3oTMtlSuVsFoMNvczFqrg)
 
 #### Brain Calc
-Run <code>brain-calc</code> to start this game. You need to calculate the result of the expression.
+You need to calculate the result of the expression. To start this game run:
+<pre><code>brain-calc</code></pre>
 [![asciicast](https://asciinema.org/a/HSi0PdE4V7ix6QWntTNm9Cbk9.svg)](https://asciinema.org/a/HSi0PdE4V7ix6QWntTNm9Cbk9)
 
 #### Brain Greatest Common Divisor
-Run <code>brain-gcd</code> to start this game. You need to find the greatest common divisor of given numbers.
+You need to find the greatest common divisor of given numbers. To start this game run:
+<pre><code>brain-gcd</code></pre>
 [![asciicast](https://asciinema.org/a/Bh0sYIJd1YOIViIojin8fkvti.svg)](https://asciinema.org/a/Bh0sYIJd1YOIViIojin8fkvti)
 
 #### Brain Progression
-Run <code>brain-progression</code> to start this game. You need to print the missing number in progression.
+You need to print the missing number in progression. To start this game run:
+<pre><code>brain-progression</code></pre>
 [![asciicast](https://asciinema.org/a/f8gQd4yi86OzPzMRiqmfvXcas.svg)](https://asciinema.org/a/f8gQd4yi86OzPzMRiqmfvXcas)
 
 #### Brain Prime
-Run <code>brain-prime</code> to start this game. You need to answer if number is prime or not. 
+You need to answer if number is prime or not. To start this game run: <pre><code>brain-prime</code></pre>
 [![asciicast](https://asciinema.org/a/WEc5nEdJsILC6pj0aP7Fheqgx.svg)](https://asciinema.org/a/WEc5nEdJsILC6pj0aP7Fheqgx)
 
 * * *

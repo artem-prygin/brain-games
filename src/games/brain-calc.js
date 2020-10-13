@@ -1,34 +1,26 @@
 import { playGame } from '../index.js';
-import getGameDataForAllRounds from '../get-game-data.js';
+import generateGameDataForAllRounds from '../generate-game-data.js';
 import getMathRandom from '../helpers/get-math-random.js';
 
 const rulesMessage = 'What is the result of the expression?';
 
-const sumAction = (operandOne, operandTwo) => {
-  const question = `${operandOne} + ${operandTwo}`;
-  const rightAnswer = operandOne + operandTwo;
+const calculateAndGenerateData = (operandOne, operandTwo) => {
+  const operations = {
+    '+': operandOne + operandTwo,
+    '-': operandOne - operandTwo,
+    '*': operandOne * operandTwo,
+  };
+  const operationsLength = Object.keys(operations).length;
+  const randomOperationIndex = getMathRandom(operationsLength);
+  const [operator, rightAnswer] = Object.entries(operations)[randomOperationIndex];
+  const question = `${operandOne} ${operator} ${operandTwo}`;
   return [question, rightAnswer];
 };
 
-const subtractAction = (operandOne, operandTwo) => {
-  const question = `${operandOne} - ${operandTwo}`;
-  const rightAnswer = operandOne - operandTwo;
-  return [question, rightAnswer];
-};
-
-const multiplyAction = (operandOne, operandTwo) => {
-  const question = `${operandOne} * ${operandTwo}`;
-  const rightAnswer = operandOne * operandTwo;
-  return [question, rightAnswer];
-};
-
-const actions = [sumAction, subtractAction, multiplyAction];
-
-const getGameData = () => {
+const generateGameData = () => {
   const operandOne = getMathRandom(100);
   const operandTwo = getMathRandom(10);
-  const randomAction = actions[getMathRandom(actions.length)];
-  return randomAction(operandOne, operandTwo);
+  return calculateAndGenerateData(operandOne, operandTwo);
 };
 
-export default () => playGame(rulesMessage, getGameDataForAllRounds(getGameData));
+export default () => playGame(rulesMessage, generateGameDataForAllRounds(generateGameData));

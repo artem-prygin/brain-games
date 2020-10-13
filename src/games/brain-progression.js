@@ -1,6 +1,6 @@
 import { playGame } from '../index.js';
 import getMathRandom from '../helpers/get-math-random.js';
-import getGameDataForAllRounds from '../get-game-data.js';
+import generateGameDataForAllRounds from '../generate-game-data.js';
 
 const rulesMessage = 'What number is missing in the progression?';
 
@@ -16,13 +16,13 @@ const createProgression = (start, step, length) => {
 const createProgressionQuestion = (progression, hidden) => {
   const question = [];
   for (let i = 0; i < progression.length; i += 1) {
-    question.push(`${progression[i]} `);
+    question.push(`${progression[i]}`);
   }
   question[hidden] = '.. ';
-  return question.join('').trim();
+  return question.join(' ').trim();
 };
 
-const getGameData = () => {
+const generateGameData = () => {
   const progressionLength = getMathRandom(12, 5);
   const hiddenElementIndex = getMathRandom(progressionLength);
   const startElement = getMathRandom(20);
@@ -33,4 +33,4 @@ const getGameData = () => {
   return [question, rightAnswer];
 };
 
-export default () => playGame(rulesMessage, getGameDataForAllRounds(getGameData));
+export default () => playGame(rulesMessage, generateGameDataForAllRounds(generateGameData));
