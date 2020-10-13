@@ -4,18 +4,18 @@ import generateGameDataForAllRounds from '../generate-game-data.js';
 
 const rulesMessage = 'Answer "yes" if the number is prime, otherwise answer "no".';
 
-const isPrimeYesOrNo = (num) => {
+const isPrime = (num) => {
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if (num % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return num > 3 ? 'yes' : 'no';
+  return num > 3;
 };
 
 const generateGameData = () => {
   const question = getMathRandom(100, 2);
-  const rightAnswer = isPrimeYesOrNo(question);
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
 
