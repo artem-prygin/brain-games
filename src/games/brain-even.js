@@ -1,6 +1,6 @@
 import playGame from '../index.js';
 import generateGameDataForAllRounds from '../generate-game-data.js';
-import getRandomNumber from '../helpers.js';
+import { getRandomNumber } from '../helpers.js';
 
 const rulesMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
 

@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import getRandomNumber from '../helpers.js';
+import { getRandomNumber } from '../helpers.js';
 import generateGameDataForAllRounds from '../generate-game-data.js';
 
 const rulesMessage = 'Answer "yes" if the number is prime, otherwise answer "no".';
