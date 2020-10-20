@@ -1,5 +1,5 @@
-import { playGame } from '../index.js';
-import getMathRandom from '../helpers/get-math-random.js';
+import playGame from '../index.js';
+import getRandomNumber from '../helpers.js';
 import generateGameDataForAllRounds from '../generate-game-data.js';
 
 const rulesMessage = 'What number is missing in the progression?';
@@ -23,14 +23,14 @@ const createProgressionQuestion = (progression, hidden) => {
 };
 
 const generateGameData = () => {
-  const progressionLength = getMathRandom(12, 5);
-  const hiddenElementIndex = getMathRandom(progressionLength);
-  const startElement = getMathRandom(20);
-  const progressionStep = getMathRandom(10);
+  const progressionLength = getRandomNumber(12, 5);
+  const hiddenElementIndex = getRandomNumber(progressionLength);
+  const startElement = getRandomNumber(20);
+  const progressionStep = getRandomNumber(10, 1);
   const progression = createProgression(startElement, progressionStep, progressionLength);
   const rightAnswer = progression[hiddenElementIndex];
   const question = createProgressionQuestion(progression, hiddenElementIndex);
-  return [question, rightAnswer];
+  return [question, rightAnswer.toString()];
 };
 
 export default () => playGame(rulesMessage, generateGameDataForAllRounds(generateGameData));

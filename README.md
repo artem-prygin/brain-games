@@ -17,26 +17,26 @@ To install the package on you machine run:
 #### Brain Even
 You need to answer if number is even or not. To start this game run:
 <pre><code>brain-even</code></pre>
-[![asciicast](https://asciinema.org/a/wlxS3oTMtlSuVsFoMNvczFqrg.svg)](https://asciinema.org/a/wlxS3oTMtlSuVsFoMNvczFqrg)
+[![asciicast](https://asciinema.org/a/Xl2QM3fHlkyww9mrYP0LgLuQM.svg)](https://asciinema.org/a/Xl2QM3fHlkyww9mrYP0LgLuQM)
 
 #### Brain Calc
 You need to calculate the result of the expression. To start this game run:
 <pre><code>brain-calc</code></pre>
-[![asciicast](https://asciinema.org/a/HSi0PdE4V7ix6QWntTNm9Cbk9.svg)](https://asciinema.org/a/HSi0PdE4V7ix6QWntTNm9Cbk9)
+[![asciicast](https://asciinema.org/a/YbxXS3EITuW44dRhoNv13Usvx.svg)](https://asciinema.org/a/YbxXS3EITuW44dRhoNv13Usvx)
 
 #### Brain Greatest Common Divisor
 You need to find the greatest common divisor of given numbers. To start this game run:
 <pre><code>brain-gcd</code></pre>
-[![asciicast](https://asciinema.org/a/Bh0sYIJd1YOIViIojin8fkvti.svg)](https://asciinema.org/a/Bh0sYIJd1YOIViIojin8fkvti)
+[![asciicast](https://asciinema.org/a/9C4Tr7GYhbV7HDtGArsp6tsY5.svg)](https://asciinema.org/a/9C4Tr7GYhbV7HDtGArsp6tsY5)
 
 #### Brain Progression
 You need to print the missing number in progression. To start this game run:
 <pre><code>brain-progression</code></pre>
-[![asciicast](https://asciinema.org/a/f8gQd4yi86OzPzMRiqmfvXcas.svg)](https://asciinema.org/a/f8gQd4yi86OzPzMRiqmfvXcas)
+[![asciicast](https://asciinema.org/a/D9By94SKU50OriWzYxoImxz23.svg)](https://asciinema.org/a/D9By94SKU50OriWzYxoImxz23)
 
 #### Brain Prime
 You need to answer if number is prime or not. To start this game run: <pre><code>brain-prime</code></pre>
-[![asciicast](https://asciinema.org/a/WEc5nEdJsILC6pj0aP7Fheqgx.svg)](https://asciinema.org/a/WEc5nEdJsILC6pj0aP7Fheqgx)
+[![asciicast](https://asciinema.org/a/HnncKFMLGP0kiBJWrYvT8JMQy.svg)](https://asciinema.org/a/HnncKFMLGP0kiBJWrYvT8JMQy)
 
 * * *
 
