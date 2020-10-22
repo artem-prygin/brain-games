@@ -14,6 +14,7 @@ const generateRoundData = () => {
   const startElem = generateRandomNumber(20);
   const progressionStep = generateRandomNumber(10, 1);
   const rightAnswer = startElem + hiddenElemIndex * progressionStep;
+  // eslint-disable-next-line max-len
   const question = createProgression(startElem, progressionStep, progressionLength, hiddenElemIndex);
   return [question, rightAnswer.toString()];
 };
