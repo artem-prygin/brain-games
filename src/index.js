@@ -3,10 +3,10 @@ import greetAndGetName from './cli.js';
 
 export const roundsCount = 3;
 
-export default async (rules, gameData) => {
+export default async (rulesMessage, gameData) => {
   try {
     const name = await greetAndGetName();
-    console.log(rules);
+    console.log(rulesMessage);
     for (let i = 0; i < roundsCount; i += 1) {
       const [question, rightAnswer] = gameData[i];
       console.log(`Question: ${question}`);

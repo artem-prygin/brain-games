@@ -1,36 +1,21 @@
-import playGame from '../index.js';
-import { getRandomNumber } from '../helpers.js';
-import generateGameDataForAllRounds from '../generate-game-data.js';
+import generateGameData from '../game-data.js';
+import { generateRandomNumber } from '../helpers.js';
 
 const rulesMessage = 'What number is missing in the progression?';
 
-const createProgression = (start, step, length) => {
-  const progression = [start];
-  for (let i = 1; i < length; i += 1) {
-    const prevElement = progression[i - 1];
-    progression.push(prevElement + step);
-  }
-  return progression;
-};
+const createProgression = (startElem, step, length, hiddenElemIndex) => (new Array(length))
+  .fill(0)
+  .map((el, index) => (index === hiddenElemIndex ? '..' : (startElem + index * step)))
+  .join(' ');
 
-const createProgressionQuestion = (progression, hidden) => {
-  const question = [];
-  for (let i = 0; i < progression.length; i += 1) {
-    question.push(`${progression[i]}`);
-  }
-  question[hidden] = '..';
-  return question.join(' ').trim();
-};
-
-const generateGameData = () => {
-  const progressionLength = getRandomNumber(12, 5);
-  const hiddenElementIndex = getRandomNumber(progressionLength);
-  const startElement = getRandomNumber(20);
-  const progressionStep = getRandomNumber(10, 1);
-  const progression = createProgression(startElement, progressionStep, progressionLength);
-  const rightAnswer = progression[hiddenElementIndex];
-  const question = createProgressionQuestion(progression, hiddenElementIndex);
+const generateRoundData = () => {
+  const progressionLength = generateRandomNumber(12, 5);
+  const hiddenElemIndex = generateRandomNumber(progressionLength);
+  const startElem = generateRandomNumber(20);
+  const progressionStep = generateRandomNumber(10, 1);
+  const rightAnswer = startElem + hiddenElemIndex * progressionStep;
+  const question = createProgression(startElem, progressionStep, progressionLength, hiddenElemIndex);
   return [question, rightAnswer.toString()];
 };
 
-export default () => playGame(rulesMessage, generateGameDataForAllRounds(generateGameData));
+export default () => generateGameData(rulesMessage, generateRoundData);
