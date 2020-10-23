@@ -1,8 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "project for hexlet",
-  "main": "index.js",
+  "description": "package of simple console math games made for hexlet",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
