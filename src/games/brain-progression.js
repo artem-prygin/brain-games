@@ -5,9 +5,7 @@ const rulesMessage = 'What number is missing in the progression?';
 
 const createProgression = (startElem, step, length, hiddenElemIndex) => Array.from({ length },
   (el, index) => (
-    index === hiddenElemIndex
-      ? '..'
-      : (startElem + index * step)
+    index === hiddenElemIndex ? '..' : (startElem + index * step)
   ))
   .join(' ');
 
