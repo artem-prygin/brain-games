@@ -1,4 +1,4 @@
-import generateGameData from '../game-data.js';
+import generateGame from '../game-generator.js';
 import { generateRandomNumber } from '../helpers.js';
 
 const rulesMessage = 'Answer "yes" if the number is prime, otherwise answer "no".';
@@ -15,10 +15,10 @@ const isPrime = (num) => {
   return true;
 };
 
-const generateRoundData = () => {
+const generateRound = () => {
   const question = generateRandomNumber(100, 2);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
 
-export default () => generateGameData(rulesMessage, generateRoundData);
+export default () => generateGame(rulesMessage, generateRound);

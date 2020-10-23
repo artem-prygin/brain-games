@@ -1,9 +1,9 @@
-import generateGameData from '../game-data.js';
+import generateGame from '../game-generator.js';
 import { generateRandomNumber } from '../helpers.js';
 
 const rulesMessage = 'What is the result of the expression?';
 
-const calculateData = (operandOne, operandTwo) => {
+const calculate = (operandOne, operandTwo) => {
   const operations = {
     '+': operandOne + operandTwo,
     '-': operandOne - operandTwo,
@@ -16,10 +16,10 @@ const calculateData = (operandOne, operandTwo) => {
   return [question, rightAnswer.toString()];
 };
 
-const generateRoundData = () => {
+const generateRound = () => {
   const operandOne = generateRandomNumber(100);
   const operandTwo = generateRandomNumber(10);
-  return calculateData(operandOne, operandTwo);
+  return calculate(operandOne, operandTwo);
 };
 
-export default () => generateGameData(rulesMessage, generateRoundData);
+export default () => generateGame(rulesMessage, generateRound);
