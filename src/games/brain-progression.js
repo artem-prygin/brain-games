@@ -4,9 +4,7 @@ import { generateRandomNumber } from '../helpers.js';
 const rulesMessage = 'What number is missing in the progression?';
 
 const createProgression = (startElem, step, length, hiddenElemIndex) => Array.from({ length },
-  (el, index) => (
-    index === hiddenElemIndex ? '..' : (startElem + index * step)
-  ))
+  (el, index) => (index === hiddenElemIndex ? '..' : (startElem + index * step)))
   .join(' ');
 
 const generateRound = () => {
