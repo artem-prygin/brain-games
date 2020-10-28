@@ -12,4 +12,3 @@ const generateRound = () => {
 };
 
 export default () => playGame(rulesMessage, Array.from({ length: roundsCount }, generateRound));
-
