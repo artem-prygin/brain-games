@@ -1,25 +1,23 @@
-import generateGame from '../game-generator.js';
+import playGame, { roundsCount } from '../index.js';
 import { generateRandomNumber } from '../helpers.js';
 
 const rulesMessage = 'What is the result of the expression?';
 
-const calculate = (operandOne, operandTwo) => {
-  const operations = {
-    '+': operandOne + operandTwo,
-    '-': operandOne - operandTwo,
-    '*': operandOne * operandTwo,
-  };
-  const operationsLength = Object.keys(operations).length;
-  const randomOperationIndex = generateRandomNumber(operationsLength);
-  const [operator, rightAnswer] = Object.entries(operations)[randomOperationIndex];
-  const question = `${operandOne} ${operator} ${operandTwo}`;
-  return [question, rightAnswer.toString()];
+const operations = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
 };
 
 const generateRound = () => {
-  const operandOne = generateRandomNumber(100);
-  const operandTwo = generateRandomNumber(10);
-  return calculate(operandOne, operandTwo);
+  const operandOne = generateRandomNumber(1, 100);
+  const operandTwo = generateRandomNumber(1, 10);
+  const operationsLength = Object.keys(operations).length;
+  const randomOperationIndex = generateRandomNumber(0, operationsLength - 1);
+  const [operator, operation] = Object.entries(operations)[randomOperationIndex];
+  const question = `${operandOne} ${operator} ${operandTwo}`;
+  const rightAnswer = operation(operandOne, operandTwo);
+  return [question, rightAnswer.toString()];
 };
 
-export default () => generateGame(rulesMessage, generateRound);
+export default () => playGame(rulesMessage, Array.from({ length: roundsCount }, generateRound));

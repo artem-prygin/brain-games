@@ -3,12 +3,12 @@ import greetAndGetName from './cli.js';
 
 export const roundsCount = 3;
 
-export default async (rulesMessage, game) => {
+export default async (rulesMessage, games) => {
   try {
     const name = await greetAndGetName();
     console.log(rulesMessage);
     for (let i = 0; i < roundsCount; i += 1) {
-      const [question, rightAnswer] = game[i];
+      const [question, rightAnswer] = games[i];
       console.log(`Question: ${question}`);
       const userAnswer = await promptly.prompt('Your answer: ');
       if (userAnswer !== rightAnswer) {

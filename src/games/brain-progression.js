@@ -1,25 +1,20 @@
-import generateGame from '../game-generator.js';
+import playGame, { roundsCount } from '../index.js';
 import { generateRandomNumber } from '../helpers.js';
 
 const rulesMessage = 'What number is missing in the progression?';
 
-const createProgression = (startElem, step, length, hiddenElemIndex) => Array.from({ length },
-  (el, index) => (index === hiddenElemIndex ? '..' : (startElem + index * step)))
+const generateQuestion = (startElem, step, length, hiddenElemIndex) => Array.from({ length },
+  (el, index) => (index === hiddenElemIndex ? '..' : startElem + index * step))
   .join(' ');
 
 const generateRound = () => {
-  const progressionLength = generateRandomNumber(12, 5);
-  const hiddenElemIndex = generateRandomNumber(progressionLength);
-  const startElem = generateRandomNumber(20);
-  const progressionStep = generateRandomNumber(10, 1);
+  const progressionLength = generateRandomNumber(5, 12);
+  const hiddenElemIndex = generateRandomNumber(0, progressionLength - 1);
+  const startElem = generateRandomNumber(1, 20);
+  const progressionStep = generateRandomNumber(1, 10);
   const rightAnswer = startElem + hiddenElemIndex * progressionStep;
-  const question = createProgression(
-    startElem,
-    progressionStep,
-    progressionLength,
-    hiddenElemIndex,
-  );
+  const question = generateQuestion(startElem, progressionStep, progressionLength, hiddenElemIndex);
   return [question, rightAnswer.toString()];
 };
 
-export default () => generateGame(rulesMessage, generateRound);
+export default () => playGame(rulesMessage, Array.from({ length: roundsCount }, generateRound));
