@@ -14,9 +14,9 @@ const generateRound = () => {
   const operandTwo = generateRandomNumber(1, 10);
   const operationsLength = Object.keys(operations).length;
   const randomOperationIndex = generateRandomNumber(0, operationsLength - 1);
-  const [operator, operation] = Object.entries(operations)[randomOperationIndex];
+  const [operator, calculate] = Object.entries(operations)[randomOperationIndex];
   const question = `${operandOne} ${operator} ${operandTwo}`;
-  const rightAnswer = operation(operandOne, operandTwo);
+  const rightAnswer = calculate(operandOne, operandTwo);
   return [question, rightAnswer.toString()];
 };
 
