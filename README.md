@@ -40,7 +40,4 @@ You need to answer if number is prime or not. To start this game run: <pre><code
 * * *
 
 ### Good luck and good bye!
-Author: Artem Grib Gribych. Social links:
-
-[![asciicast](https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/32px-VK.com-logo.svg.png)](https://vk.com/gribgribych)
-[![asciicast](https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Instagram.svg/32px-Instagram.svg.png)](https://www.instagram.com/mushroomsgram/)
+Author: Artem Prygin
