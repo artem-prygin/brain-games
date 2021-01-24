@@ -1,5 +1,4 @@
 # Brain Games: CLI
-[![Actions Status](https://github.com/artem-prygin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/artem-prygin/frontend-project-lvl1/actions?query=workflow%3Ahexlet-check)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/artem-prygin/frontend-project-lvl1)
 [![Linter for Google Actions](https://github.com/artem-prygin/frontend-project-lvl1/workflows/Linter%20Github%20Actions/badge.svg)](https://github.com/artem-prygin/frontend-project-lvl1/actions?query=workflow%3A%22Linter+Github+Actions%22)
 
